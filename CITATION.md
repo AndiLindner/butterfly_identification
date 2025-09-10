@@ -22,3 +22,22 @@ doi={10.1038/s41597-025-05708-z},
 url={https://doi.org/10.1038/s41597-025-05708-z}
 }
 ```
+
+```bibtex
+@article{Barkmannetal2025b,
+title = {(To be prepared)},
+journal = {},
+volume = {},
+pages = {},
+year = {2025},
+issn = {},
+doi = {},
+url = {},
+author= {Barkmann, Friederike
+and Lindner, Andreas
+and R{\"u}disser, Johannes},
+keywords = {},
+abstract = {}
+}
+```
+

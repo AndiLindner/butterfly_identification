@@ -363,4 +363,4 @@ training and testing. Andreas Lindner contributed to the
 scripts, adapting the code for high performance computing and implementing data
 parallelism to reduce training times.
 
-For the license, see the [LICENSE](LICENSE) file; and for the publications, see the [CITATION](CITATION) file.
+For the license, see the [LICENSE](LICENSE) file; and for the publications, see the [CITATION](CITATION.md) file.
