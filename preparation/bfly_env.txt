@@ -1,0 +1,11 @@
+# venv packages for butterfly recognition project
+numpy
+torchvision
+timm
+accelerate
+scikit-learn
+jupyterlab
+matplotlib
+ray[train]
+ray[tune]
+hyperopt

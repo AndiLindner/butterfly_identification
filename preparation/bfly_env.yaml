@@ -1,0 +1,25 @@
+# Conda/pip environment for buttergly recognition project
+name: acc_ray
+channels:
+  - huggingface
+    #- pytorch
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12  # For Ray wheel 3.8 -> too low for rocm torch wheel
+  - numpy
+    #- torchvision
+  - accelerate
+  - scikit-learn
+  - jupyterlab
+  - matplotlib
+  - ray-train
+  - ray-tune
+  - pip
+  - pip:
+    - torchvision
+    - timm
+    # For AMD GPUs, however Ray requires GLIBC 2.34
+    #- torchvision --index-url https://download.pytorch.org/whl/rocm6.3
+    #- ray[train,tune] @ https://github.com/ROCm/ray/releases/download/v3.0.0-dev0%2Brocm/ray-3.0.0.dev0-cp38-cp38-manylinux2014_x86_64.whl
+    - hyperopt
