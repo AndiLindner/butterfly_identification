@@ -331,7 +331,7 @@ To install with GPU-support, a CUDA module often has to be loaded.
 Example files for Austria's national
 [MUSICA](https://asc.ac.at/systems/musica/) supercomputer and the
 [LEO5](https://www.uibk.ac.at/zid/systeme/hpc-systeme/leo5/) HPC system of the
-University of Innsbruck. are also provided in this repository.
+University of Innsbruck are also provided in this repository.
 
 
 ## Evaluation
