@@ -5,7 +5,6 @@
 
 # Mail notifications are not configured on LUMI
 
-#SBATCH -D /users/lindnera/eurocc/projects/butterflies/andi
 #SBATCH --output=/users/lindnera/slurm_out/%A_%a_%x_%j.out
 #SBATCH --error=/users/lindnera/slurm_out/%A_%a_%x_%j.err
 

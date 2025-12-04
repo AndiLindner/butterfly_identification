@@ -3,7 +3,6 @@
 ##SBATCH --test-only  # Only check slurm script
 #SBATCH -J bfly  # Job name
 
-#SBATCH -D /leonardo/home/userexternal/alindner/eurocc/projects/butterflies/andi
 #SBATCH -o /leonardo/home/userexternal/alindner/slurm_out/%A_%a_%x_%j.out
 #SBATCH -e /leonardo/home/userexternal/alindner/slurm_out/%A_%a_%x_%j.err
 

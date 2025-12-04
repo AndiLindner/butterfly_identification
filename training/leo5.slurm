@@ -3,7 +3,6 @@
 ##SBATCH --test-only  # Only check slurm script
 #SBATCH -J bfly  # Job name
 
-#SBATCH -D /home/c102/cXXXXXX/eurocc/projects/butterflies/andi
 #SBATCH -o /home/c102/cXXXXXX/slurm_out/%A_%a_%x_%j.out
 #SBATCH -e /home/c102/cXXXXXX/slurm_out/%A_%a_%x_%j.err
 
@@ -15,7 +14,7 @@
 #SBATCH --nodes=1
 ##SBATCH --ntasks=1
 #SBATCH --ntasks-per-node=1
-##SBATCH --cpus-per-task=32  # Calculate 8-16 per GPU
+#SBATCH --cpus-per-task=8  # Calculate 8-16 per GPU
 #SBATCH --gpus-per-task=2  # To use SLURM variable, OR with specific type below
 ##SBATCH --cpus-per-gpu=8  # minimum 12 *per GPU* are good
 ##SBATCH --gpus=a30:2  # GPU type and count

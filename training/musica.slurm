@@ -4,7 +4,6 @@
 
 #SBATCH --job-name bfly
 
-#SBATCH -D /home/anli100105/eurocc/projects/butterflies/andi
 #SBATCH -o /home/anli100105/slurm_out/%A_%a_%x_%j.out
 #SBATCH -e /home/anli100105/slurm_out/%A_%a_%x_%j.err
 
