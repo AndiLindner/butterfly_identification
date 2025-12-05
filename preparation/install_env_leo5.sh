@@ -2,7 +2,7 @@
 set -eo pipefail
 
 module purge
-module load cuda/12.2.1-gcc-13.2.0-m4ekvjj
+module load cuda/12.6.2-gcc-13.3.0-n5c5eu7
 export LD_LIBRARY_PATH="$LIBRARY_PATH:$LD_LIBRARY_PATH"
 module load Anaconda3/2023.10/miniconda-base-2023.10
 

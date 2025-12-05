@@ -23,7 +23,7 @@ MODELS=(resnet50 resnet101 resnet152
     )
 
 #MODEL=${MODELS[$SLURM_ARRAY_TASK_ID]}
-MODEL="wide_resnet101_2"
+MODEL="mobilenet_v3_small"
 
 # Training parameters
 SCRIPT="run_acc.py"
@@ -37,13 +37,13 @@ OVERSAMPLING=1  # 0 for False (using class weights) or 1 for True
 CHECKPOINTING=0  # 0 for False or 1 for True (checkpoint after each epoch)
 
 
-ENV="/scratch/cXXXXXX/conda_envs/bfly_env"
-DATA_DIR="/scratch/cXXXXXX"
+ENV="$SCRATCH/conda_envs/bfly_env"
+DATA_DIR="/scratch/llm/datasets/butterfly_images"
 RESULTS_DIR=$SCRATCH
 
 
 module purge
-module load cuda/12.2.1-gcc-13.2.0-m4ekvjj >/dev/null # To compile CUDA ops
+module load cuda/12.6.2-gcc-13.3.0-n5c5eu7 >/dev/null # To compile CUDA ops
 module load Anaconda3/2023.10/miniconda-base-2023.10 >/dev/null
 module list
 
