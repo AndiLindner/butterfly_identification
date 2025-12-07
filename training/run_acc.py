@@ -172,13 +172,13 @@ def worker(args):
     )
 
     # Save training and validation set indices for reproducibility
-    np.save(os.path.join(args.data_dir, "preparation", "train_idx.npy"),
-            train_idx)
-    np.save(os.path.join(args.data_dir, "preparation", "val_idx.npy"),
-            val_idx)
+    #np.save(os.path.join(args.data_dir, "preparation", "train_idx.npy"),
+    #        train_idx)
+    #np.save(os.path.join(args.data_dir, "preparation", "val_idx.npy"),
+    #        val_idx)
     # Can save also number of examples per class for later use
-    np.save(os.path.join(args.data_dir, "preparation", "targets.npy"),
-            np.array(targets))
+    #np.save(os.path.join(args.data_dir, "preparation", "targets.npy"),
+    #        np.array(targets))
 
     # Set number of muliprocessing workers for the data loaders
     num_workers = int(os.environ['OMP_NUM_THREADS'])

@@ -3,8 +3,8 @@
 ##SBATCH --test-only  # Only check slurm script
 #SBATCH -J bfly  # Job name
 
-#SBATCH -o /home/c102/cXXXXXX/slurm_out/%A_%a_%x_%j.out
-#SBATCH -e /home/c102/cXXXXXX/slurm_out/%A_%a_%x_%j.err
+#SBATCH -o /home/cxxx/cXXXXXX/slurm_out/%A_%a_%x_%j.out
+#SBATCH -e /home/cxxx/cXXXXXX/slurm_out/%A_%a_%x_%j.err
 
 #SBATCH --mail-type=ALL  #,ARRAY_TASKS
 #SBATCH --mail-user=XXXXXX
