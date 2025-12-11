@@ -27,18 +27,20 @@ MODEL="mobilenet_v3_small"
 
 # Training parameters
 SCRIPT="run_acc.py"
-BATCH_SIZE=16  # Batch size *per device*
-EPOCHS=50
+BATCH_SIZE=64  # Batch size *per device*
+EPOCHS=5
 BASE_LR=0.004  # Scales linearly with devices in code
 WEIGHT_DECAY=1e-6
 OPTIMIZER="SGD"  # SGD, ASGD, RMSprop, Adam, AdamW, Adadelta, Adagrad
-SCHEDULER="ConstantLR"  # StepLR, ReduceLROnPlateau
-OVERSAMPLING=1  # 0 for False (using class weights) or 1 for True
+SCHEDULER="ConstantLR"  # StepLR, ReduceLROnPlateau, CosineAnnealingLR
+OVERSAMPLING=0  # 0 for False (using class weights) or 1 for True
 CHECKPOINTING=0  # 0 for False or 1 for True (checkpoint after each epoch)
 
 
-ENV="$SCRATCH/conda_envs/bfly_env"
+# Centrally provided conda environment and dataset
+ENV="/scratch/llm/conda_envs/bfly_env"
 DATA_DIR="/scratch/llm/datasets/butterfly_images"
+# Personal results directory
 RESULTS_DIR=$SCRATCH
 
 
@@ -77,7 +79,7 @@ accelerate launch \
     --num_machines=$SLURM_JOB_NUM_NODES \
     --num_processes=$(($SLURM_NNODES*$SLURM_GPUS_PER_TASK)) \
     --num_cpu_threads_per_process=$(($SLURM_CPUS_PER_TASK/$SLURM_GPUS_PER_TASK)) \
-    --rdzv_backend=static `# c10d does not work on LEO5 and LEONARDO`\
+    --rdzv_backend=static `# or c10d`\
     --mixed_precision="no" \
     --dynamo_backend="no" \
     $SCRIPT \
